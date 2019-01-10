@@ -56,4 +56,21 @@ public class BaseCard {
     // 等级
     public int Level { get; set; }
 
+    public int Index { get; set; }
+
+    // 卡牌升级
+    public void Upgrade()
+    {
+        if (Level > 2)
+        {
+            return;
+        }
+        //todo 更新属性
+    }
+
+    // 卡牌随机变换
+    public void Change()
+    {
+
+    }
 }
