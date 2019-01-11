@@ -89,9 +89,13 @@
 -define:UNITY_PRO_LICENSE
 Assets/Scripts/Cards/BaseCard.cs
 Assets/Scripts/Cards/CardGroup.cs
+Assets/Scripts/Controller.cs
+Assets/Scripts/GameManager.cs
+Assets/Scripts/Model.cs
 Assets/Scripts/Player/Player.cs
 Assets/Scripts/Tools/MyStack.cs
 Assets/Scripts/Tools/Singleton.cs
+Assets/Scripts/View.cs
 -r:D:\Unity5.6.6\Editor\Data\Mono\lib\mono\unity\System.Runtime.Serialization.dll
 -r:D:\Unity5.6.6\Editor\Data\Mono\lib\mono\unity\System.Xml.Linq.dll
 -r:D:\Unity5.6.6\Editor\Data\Mono\lib\mono\unity\UnityScript.dll

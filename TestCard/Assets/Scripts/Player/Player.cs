@@ -27,8 +27,7 @@ public class Player {
     // 卡组 CardGroup
     public CardGroup CardGroup;
 
-    // todo 神器组 ItemGroup
-
+    // todo 神器组 ItemGroup    
 
     public Player(int career)
     {
