@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2048,1152">
+  <displayList>
+    <graph id="n0_wg68" name="bg" xy="0,0" size="2048,1152" type="rect" lineSize="0" fillColor="#ff35a6a6">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n2_wg68" name="start_btn" src="wg681" fileName="components/btn_basic.xml" xy="123,651">
+      <Button title="Start"/>
+    </component>
+  </displayList>
+</component>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,200" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <graph id="n0_wg68" name="bg" xy="-10,-10" size="220,220" type="rect" lineSize="0" fillColor="#ffffcc00">
+      <gearDisplay controller="button" pages="1"/>
+    </graph>
+    <loader id="n1_wg68" name="icon" xy="0,0" size="200,200" align="center" vAlign="middle" fill="scaleFree"/>
+  </displayList>
+  <Button mode="Radio"/>
+</component>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2048,1152">
+  <controller name="select" pages="0,,1,,2,,3," selected="3"/>
+  <displayList>
+    <graph id="n0_wg68" name="bg" xy="0,0" size="2048,1152" locked="true" type="rect" lineSize="0" fillColor="#ff6b5f5f">
+      <relation target="" sidePair="width-width,height-height"/>
+    </graph>
+    <component id="n1_wg68" name="btn_1" src="wg683" fileName="components/select_btn.xml" xy="405,376">
+      <Button title="1" icon="ui://4ho3qoclwg686" controller="select" page="1"/>
+    </component>
+    <component id="n2_wg68" name="btn_2" src="wg683" fileName="components/select_btn.xml" xy="924,376">
+      <Button icon="ui://4ho3qoclwg685" controller="select" page="2"/>
+    </component>
+    <component id="n3_wg68" name="btn_3" src="wg683" fileName="components/select_btn.xml" xy="1443,376">
+      <Button checked="true" title="3" icon="ui://4ho3qoclwg687" controller="select" page="3"/>
+    </component>
+    <component id="n4_wg68" name="confirm_btn" src="wg681" fileName="components/btn_basic.xml" xy="874,823">
+      <gearDisplay controller="select" pages="1,2,3"/>
+      <Button title="Confirm"/>
+    </component>
+  </displayList>
+</component>

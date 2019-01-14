@@ -10,6 +10,7 @@ public enum GAME_STATE
     Fight,      // 战斗中
     Reward,     // 奖励界面
     Pause,      // 暂停
+    Over,       // 结束
 }
 
 public class Controller : Singleton<Controller> {
@@ -21,15 +22,17 @@ public class Controller : Singleton<Controller> {
     public View view;
 
     // 默认暂停
-    public GAME_STATE state = GAME_STATE.Pause;
+    public GAME_STATE state = GAME_STATE.Over;
 
     protected override void Awake()
     {
         base.Awake();
         model = GameObject.FindGameObjectWithTag("Model").GetComponent<Model>();
-        view = GameObject.FindGameObjectWithTag("view").GetComponent<View>();
+        view = GameObject.FindGameObjectWithTag("View").GetComponent<View>();
 
         InitStartGame();
+
+        DontDestroyOnLoad(this);
     }
 
     public void InitStartGame()

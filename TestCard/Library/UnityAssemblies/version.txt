@@ -10,3 +10,17 @@ D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/Unit
 D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll
 D:/Unity5.6.6/Editor/Data/Managed/UnityEditor.dll
 D:/Unity5.6.6/Editor/Data/Managed/Mono.Cecil.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/GUISystem/Editor/UnityEditor.UI.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityPurchasing/Editor/UnityEditor.Purchasing.dll
+D:/Unity5.6.6/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll
+D:/Unity5.6.6/Editor/Data/Managed/UnityEditor.Graphs.dll
+D:/Unity5.6.6/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+D:/Unity5.6.6/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.WSA.Extensions.dll
+D:/Unity5.6.6/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll
+C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll

@@ -8,11 +8,17 @@ public class View : MonoBehaviour {
     public void OpenLoginPage()
     {
         Controller.Instance.state = GAME_STATE.LOGIN;
+
+        UILoginPage uilogin = new UILoginPage();
+        uilogin.Show();
     }
 
     // 打开选择界面
     public void OpenSelectPage()
     {
         Controller.Instance.state = GAME_STATE.SELECT;
+
+        UISelectPage uiSelect = new UISelectPage();
+        uiSelect.Show();
     }
 }
