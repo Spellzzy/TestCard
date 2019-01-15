@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+	<info ID="10001" Name="Card_1" Quality="1" Carrer="1" Icon="str_1"/>
+	<info ID="10002" Name="Card_2" Quality="2" Carrer="1" Icon="str_2"/>
+	<info ID="10003" Name="Card_3" Quality="1" Carrer="1" Icon="str_3"/>
+	<info ID="10004" Name="Card_4" Quality="2" Carrer="1" Icon="str_4"/>
+	<info ID="10005" Name="Card_5" Quality="1" Carrer="1" Icon="str_5"/>
+	<info ID="10006" Name="Card_6" Quality="2" Carrer="1" Icon="str_6"/>
+	<info ID="10007" Name="Card_7" Quality="1" Carrer="1" Icon="str_7"/>
+	<info ID="10008" Name="Card_8" Quality="2" Carrer="1" Icon="str_8"/>
+	<info ID="10009" Name="Card_9" Quality="1" Carrer="1" Icon="str_9"/>
+	<info ID="10010" Name="Card_10" Quality="2" Carrer="1" Icon="str_10"/>
+	<info ID="10011" Name="Card_11" Quality="1" Carrer="1" Icon="str_11"/>
+	<info ID="10012" Name="Card_12" Quality="2" Carrer="1" Icon="str_12"/>
+	<info ID="10013" Name="Card_13" Quality="1" Carrer="1" Icon="str_13"/>
+	<info ID="10014" Name="Card_14" Quality="1" Carrer="1" Icon="str_14"/>
+	<info ID="10015" Name="Card_15" Quality="2" Carrer="1" Icon="str_15"/>
+	<info ID="10016" Name="Card_16" Quality="1" Carrer="1" Icon="str_16"/>
+	<info ID="10017" Name="Card_17" Quality="2" Carrer="1" Icon="str_17"/>
+	<info ID="10018" Name="Card_18" Quality="1" Carrer="1" Icon="str_18"/>
+	<info ID="10019" Name="Card_19" Quality="1" Carrer="1" Icon="str_19"/>
+	<info ID="10020" Name="Card_20" Quality="1" Carrer="1" Icon="str_20"/>
+</resources>

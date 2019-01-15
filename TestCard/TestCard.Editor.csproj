@@ -129,6 +129,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Editor\XMLMaker.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Editor\DisplayObjectEditor.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Editor\EditorToolSet.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Editor\PackagesWindow.cs" />
@@ -144,6 +145,8 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\card_1.xml" />
+    <None Include="Assets\card_info.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
