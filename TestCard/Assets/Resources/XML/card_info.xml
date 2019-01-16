@@ -1,0 +1,5 @@
+<resources>
+  <info ID="10001" Name="Card_1" Quality="1" Carrer="1" Icon="1" />
+  <info ID="10002" Name="Card_2" Quality="1" Carrer="1" Icon="1" />
+  <info ID="10003" Name="Card_3" Quality="1" Carrer="1" Icon="1" />
+</resources>

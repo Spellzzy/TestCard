@@ -239,6 +239,7 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\Resources\XML\card_info.xml" />
     <None Include="Assets\card_1.xml" />
     <None Include="Assets\card_info.xml" />
   </ItemGroup>

@@ -11,16 +11,22 @@ public class XMLMaker : EditorWindow
     // 新加列
     private string newAttribute = "";
 
+    static string newXMLName = "card_info.xml";
+
+    static string resPath = "";
+
+    string xmlPath = resPath + "/" + newXMLName;
+
     [MenuItem("Game/XMLMaker")]
     static void Open()
     {
+        resPath = Application.dataPath + "/Resources/XML";
+
         window = EditorWindow.GetWindow(typeof(XMLMaker));
 
-        window.titleContent.text = "制作卡牌模版";
+        window.titleContent.text = "制作卡牌XML模版";
 
         window.autoRepaintOnSceneChange = true;
-
-        //window.position = new Rect(new Vector2(500, 500), new Vector2(500, 500));
 
         window.minSize = new Vector2(600, 500);
         window.maxSize = window.minSize;
@@ -28,8 +34,6 @@ public class XMLMaker : EditorWindow
         position.center = new Rect(0f, 0f, Screen.currentResolution.width, Screen.currentResolution.height).center;
 
         window.position = position;
-
-
         window.Show();
     }
 
@@ -41,32 +45,42 @@ public class XMLMaker : EditorWindow
         // 行间隔
         GUILayout.Space(10);
 
-        if (GUILayout.Button("Create"))
-        {
-            CreateXML();
-        }
+        newXMLName = EditorGUILayout.TextField("表名 -->: ", newXMLName);
+        xmlPath = resPath + "/" + newXMLName;
 
-        GUILayout.Space(30);
-        if (GUILayout.Button("Delete"))
-        {
-            DeleteXML();
-        }
-        //if (GUI.Button(new Rect(310, 10, 150, 100), "Load"))
-        //{
-        //    LoadXML();
-        //}
+        GUIStyle a = new GUIStyle();
 
-        GUILayout.Space(30);
-        newAttribute = EditorGUILayout.TextField("新列名称 -->: ", newAttribute);
-        if (GUILayout.Button("Add"))
+        if (!File.Exists(xmlPath))
         {
-            AddXml();
+            GUILayout.Label("不存在该表 需要新建");
+            GUILayout.Space(20);
+            if (GUILayout.Button("Create"))
+            {
+                CreateXML();
+            }
+        }
+        else
+        {
+            GUILayout.Label("已存在该表");
+            GUILayout.Space(20);
+            EditorGUILayout.BeginHorizontal();
+            newAttribute = EditorGUILayout.TextField("添加新列 --> 名称 : ", newAttribute);
+            if (GUILayout.Button("Add"))
+            {
+                AddXml();
+            }
+            EditorGUILayout.EndHorizontal();
+
+            GUILayout.Space(30);
+            if (GUILayout.Button("Delete"))
+            {
+                DeleteXML();
+            }
         }
     }
 
     void CreateXML()
     {
-        string xmlPath = Application.dataPath + "/card_info.xml";
         if (!File.Exists(xmlPath))
         {
             //创建最上一层节点
@@ -114,7 +128,7 @@ public class XMLMaker : EditorWindow
 
     void DeleteXML()
     {
-        string xmlPath = Application.dataPath + "/card_info.xml";
+        
         if (File.Exists(xmlPath))
         {
             File.Delete(xmlPath);
@@ -122,40 +136,6 @@ public class XMLMaker : EditorWindow
         else
         {
             Debug.LogError("Null!!!!");
-        }
-    }
-
-    void UpdateXML()
-    {
-        string xmlPath = Application.dataPath + "/card_info.xml";
-        if (File.Exists(xmlPath))
-        {
-            XmlDocument xml = new XmlDocument();
-            xml.Load(xmlPath);
-
-            XmlNodeList xmlNodeList = xml.SelectSingleNode("objects").ChildNodes;
-            foreach (XmlElement xl1 in xmlNodeList)
-            {
-                if (xl1.GetAttribute("id") == "111")
-                {
-                    xl1.SetAttribute("id", "333");
-                    foreach (XmlElement xl2 in xl1.ChildNodes)
-                    {
-                        if (xl2.GetAttribute("age") == "11")
-                        {
-                            xl2.SetAttribute("agenow", "22");
-                            xl2.InnerText = "Grown ";
-                        }
-                    }
-
-                    XmlElement child = xml.CreateElement("add");
-                    child.SetAttribute("new", "1.0");
-                    xl1.AppendChild(child);
-                }
-            }
-
-            xml.Save(xmlPath);
-            Debug.LogError("Update Over");
         }
     }
 
@@ -202,20 +182,16 @@ public class XMLMaker : EditorWindow
             Debug.LogError("新列名不可为空!!");
             return;
         }
-        string xmlPath = Application.dataPath + "/card_info.xml";
 
         if (File.Exists(xmlPath))
         {
             XmlDocument xml = new XmlDocument();
             xml.Load(xmlPath);
 
-
-
             XmlNodeList xmlNodeList = xml.SelectSingleNode("resources").ChildNodes;
             foreach (XmlElement xl1 in xmlNodeList)
             {
                 string cur = xl1.GetAttribute(newAttribute);
-                Debug.LogError("cur ----> " + cur);
                 if (cur == "")
                 {
                     xl1.SetAttribute(newAttribute, "1");
@@ -229,8 +205,7 @@ public class XMLMaker : EditorWindow
 
             xml.Save(xmlPath);
 
-            Debug.Log("添加新列:" + newAttribute + "成功");
-
+            window.ShowNotification(new GUIContent("添加新列: " + newAttribute + "成功"));
         }
         else
         {
