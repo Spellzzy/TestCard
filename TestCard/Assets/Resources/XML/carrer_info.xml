@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+	<info ID="101" Name="Warrior" HP="90" Desc="Fry" Icon="Fry"/>
+	<info ID="102" Name="Hunter" HP="70" Desc="Bender" Icon="Bender"/>
+	<info ID="103" Name="Watlock" HP="60" Desc="Hubert" Icon="Hubert"/>
+</resources>

@@ -14,9 +14,5 @@
     <component id="n3_wg68" name="btn_3" src="wg683" fileName="components/select_btn.xml" xy="1443,376">
       <Button checked="true" title="3" icon="ui://4ho3qoclwg687" controller="select" page="3"/>
     </component>
-    <component id="n4_wg68" name="confirm_btn" src="wg681" fileName="components/btn_basic.xml" xy="874,823">
-      <gearDisplay controller="select" pages="1,2,3"/>
-      <Button title="Confirm"/>
-    </component>
   </displayList>
 </component>

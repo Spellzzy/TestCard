@@ -224,12 +224,15 @@
     <Compile Include="Assets\Scripts\Cards\BaseCard.cs" />
     <Compile Include="Assets\Scripts\Cards\CardGroup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\Data\XMLInfo.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Model.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Tools\MyStack.cs" />
+    <Compile Include="Assets\Scripts\Tools\ReadXML.cs" />
     <Compile Include="Assets\Scripts\Tools\Singleton.cs" />
     <Compile Include="Assets\Scripts\UI\UILoginPage.cs" />
+    <Compile Include="Assets\Scripts\UI\UIMapPage.cs" />
     <Compile Include="Assets\Scripts\UI\UISelectPage.cs" />
     <Compile Include="Assets\Scripts\View.cs" />
   </ItemGroup>
@@ -240,6 +243,7 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
     <None Include="Assets\Resources\XML\card_info.xml" />
+    <None Include="Assets\Resources\XML\carrer_info.xml" />
     <None Include="Assets\card_1.xml" />
     <None Include="Assets\card_info.xml" />
   </ItemGroup>

@@ -24,7 +24,7 @@ public class XMLMaker : EditorWindow
 
         window = EditorWindow.GetWindow(typeof(XMLMaker));
 
-        window.titleContent.text = "制作卡牌XML模版";
+        window.titleContent.text = "制作XML模版";
 
         window.autoRepaintOnSceneChange = true;
 
@@ -94,20 +94,14 @@ public class XMLMaker : EditorWindow
 
             element1.SetAttribute("ID", "10001");
             element1.SetAttribute("Name", "Card_1");
-            element1.SetAttribute("Quality", "1");
-            element1.SetAttribute("Carrer", "1");
 
             XmlElement element2 = xml.CreateElement("info");
             element2.SetAttribute("ID", "10002");
             element2.SetAttribute("Name", "Card_2");
-            element2.SetAttribute("Quality", "1");
-            element2.SetAttribute("Carrer", "1");
 
             XmlElement element3 = xml.CreateElement("info");
             element3.SetAttribute("ID", "10003");
             element3.SetAttribute("Name", "Card_3");
-            element3.SetAttribute("Quality", "1");
-            element3.SetAttribute("Carrer", "1");
 
             root.AppendChild(element1);
             root.AppendChild(element2);

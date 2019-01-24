@@ -5,11 +5,13 @@
     <component id="wg681" name="btn_basic.xml" path="/components/" exported="true"/>
     <component id="wg682" name="select_page.xml" path="/" exported="true"/>
     <component id="wg683" name="select_btn.xml" path="/components/" exported="true"/>
-    <image id="wg684" name="5fdb82dda144ad34a8d02be1d1a20cf430ad8566.jpg" path="/image/"/>
-    <image id="wg685" name="bander.jpg" path="/image/"/>
-    <image id="wg686" name="bcf619f3d7ca7bcbcc446b49bf096b63f724a896.jpg" path="/image/"/>
-    <image id="wg687" name="c7dcbe18972bd40750a67f9b7a899e510eb3096f.jpg" path="/image/"/>
+    <image id="wg684" name="Leela.jpg" path="/image/"/>
+    <image id="wg685" name="Bender.jpg" path="/image/"/>
+    <image id="wg686" name="Fry.jpg" path="/image/"/>
+    <image id="wg687" name="Hubert.jpg" path="/image/"/>
     <image id="wg688" name="c22f842397dda1445d66c0d4b3b7d0a20df48666.jpg" path="/image/"/>
+    <component id="wema9" name="map_page.xml" path="/" exported="true"/>
+    <component id="f353a" name="select_panel.xml" path="/panel/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

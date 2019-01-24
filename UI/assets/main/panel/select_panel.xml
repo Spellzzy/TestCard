@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2048,1152">
+  <displayList>
+    <graph id="n0_f353" name="bg" xy="0,0" size="2048,1152" locked="true" type="rect" lineSize="0" fillColor="#ff3c83cf"/>
+    <component id="n1_f353" name="btn_back" src="wg681" fileName="components/btn_basic.xml" xy="171,960">
+      <Button title="Back"/>
+    </component>
+    <component id="n2_f353" name="btn_confirm" src="wg681" fileName="components/btn_basic.xml" xy="1510,960">
+      <Button title="Confirm"/>
+    </component>
+    <graph id="n4_f353" name="n4" xy="661,111" size="1168,798" type="rect" lineSize="0" fillColor="#ff669966"/>
+    <text id="n3_f353" name="n3" xy="726,202" size="232,70" fontSize="60" align="right" vAlign="middle" autoSize="none" bold="true" text="Name:"/>
+    <text id="n5_f353" name="n5" xy="726,341" size="232,70" fontSize="60" align="right" vAlign="middle" autoSize="none" bold="true" text="HP:"/>
+    <text id="n6_f353" name="n6" xy="726,483" size="232,70" fontSize="60" align="right" vAlign="middle" autoSize="none" bold="true" text="DESC:"/>
+    <text id="n7_f353" name="text_name" xy="981,202" size="759,70" fontSize="48" vAlign="middle" autoSize="none" text=""/>
+    <text id="n8_f353" name="text_hp" xy="981,341" size="759,70" fontSize="48" vAlign="middle" autoSize="none" text=""/>
+    <text id="n9_f353" name="text_desc" xy="981,483" size="759,384" fontSize="48" vAlign="middle" autoSize="none" bold="true" text=""/>
+    <graph id="n11_f353" name="n11" xy="48,111" size="568,798" type="rect" lineSize="0" fillColor="#ff669966"/>
+    <loader id="n10_f353" name="loade_icon" xy="112,140" size="439,431"/>
+  </displayList>
+</component>
