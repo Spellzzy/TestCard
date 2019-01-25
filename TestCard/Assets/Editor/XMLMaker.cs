@@ -4,6 +4,16 @@ using System.Collections;
 using System.IO;
 using UnityEditor;
 
+public enum XMLTYPE
+{
+    NEW,
+    CARD,
+    CARRER,
+    STAGE,
+    MAP,
+    MONSTER
+}
+
 public class XMLMaker : EditorWindow
 {
     private static EditorWindow window;
@@ -11,7 +21,7 @@ public class XMLMaker : EditorWindow
     // 新加列
     private string newAttribute = "";
 
-    static string newXMLName = "card_info.xml";
+    static string newXMLName = "new.xml";
 
     static string resPath = "";
 
@@ -40,15 +50,43 @@ public class XMLMaker : EditorWindow
 
     private ArrayList textList = new ArrayList();
 
+    private XMLTYPE currentType = XMLTYPE.NEW;
+
     private void OnGUI()
     {
         // 行间隔
         GUILayout.Space(10);
 
-        newXMLName = EditorGUILayout.TextField("表名 -->: ", newXMLName);
-        xmlPath = resPath + "/" + newXMLName;
+        currentType = (XMLTYPE)EditorGUILayout.EnumPopup("操作XML类型 ->", currentType);
 
-        GUIStyle a = new GUIStyle();
+        GUILayout.Space(20);
+
+        switch (currentType)
+        {
+            case XMLTYPE.NEW:
+                newXMLName = "new.xml";
+                newXMLName = EditorGUILayout.TextField("表名 -->: ", newXMLName);
+                break;                
+            case XMLTYPE.CARD:
+                newXMLName = "card_info.xml";
+                break;
+            case XMLTYPE.CARRER:
+                newXMLName = "carrer_info.xml";
+                break;
+            case XMLTYPE.STAGE:
+                newXMLName = "stage_info.xml";
+                break;
+            case XMLTYPE.MAP:
+                newXMLName = "map_info.xml";
+                break;
+            case XMLTYPE.MONSTER:
+                newXMLName = "monster_info.xml";
+                break;
+            default:
+                break;
+        }
+
+        xmlPath = resPath + "/" + newXMLName;
 
         if (!File.Exists(xmlPath))
         {
@@ -93,15 +131,12 @@ public class XMLMaker : EditorWindow
             XmlElement element1 = xml.CreateElement("info");
 
             element1.SetAttribute("ID", "10001");
-            element1.SetAttribute("Name", "Card_1");
 
             XmlElement element2 = xml.CreateElement("info");
             element2.SetAttribute("ID", "10002");
-            element2.SetAttribute("Name", "Card_2");
 
             XmlElement element3 = xml.CreateElement("info");
             element3.SetAttribute("ID", "10003");
-            element3.SetAttribute("Name", "Card_3");
 
             root.AppendChild(element1);
             root.AppendChild(element2);

@@ -13,13 +13,11 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile>
-    </CompilerResponseFile>
+    <CompilerResponseFile></CompilerResponseFile>
     <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>5.6.6f2</UnityVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -149,10 +147,10 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
     <None Include="Assets\Resources\XML\card_info.xml" />
     <None Include="Assets\Resources\XML\carrer_info.xml" />
+    <None Include="Assets\Resources\XML\map_info.xml" />
+    <None Include="Assets\Resources\XML\stage_info.xml" />
     <None Include="Assets\card_1.xml" />
-    <None Include="Assets\card_info.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <None Include="Assets\card_info.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
