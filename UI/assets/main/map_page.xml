@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component size="2048,1152"/>
+<component size="2048,1152">
+  <displayList>
+    <graph id="n0_h5ed" name="bg" xy="0,0" size="2048,1152" type="rect" lineSize="0" fillColor="#ff87770c">
+      <relation target="" sidePair="height-height,width-width"/>
+    </graph>
+    <list id="n1_h5ed" name="map_list" xy="71,27" size="1905,1124" layout="row" overflow="scroll" scroll="horizontal" defaultItem="ui://4ho3qocls0i3k" align="center">
+      <item/>
+      <item/>
+      <item/>
+    </list>
+    <graph id="n2_nhm7" name="n2" xy="179,353" size="282,361" type="rect"/>
+    <graph id="n3_nhm7" name="n3" xy="1229,242" size="431,463" type="rect"/>
+    <graph id="n4_nhm7" name="n4" xy="1013,364" size="139,343" type="rect"/>
+    <graph id="n5_nhm7" name="n5" xy="1736,367" size="117,339" type="rect"/>
+    <graph id="n7_nhm7" name="n7" xy="2,3" size="1186,108" type="rect"/>
+    <graph id="n8_nhm7" name="n8" xy="1596,2" size="447,107" type="rect"/>
+    <graph id="n9_nhm7" name="n9" xy="5,1028" size="100,100" type="rect"/>
+    <graph id="n10_nhm7" name="n10" xy="1925,1036" size="100,100" type="rect"/>
+    <graph id="n11_nhm7" name="n11" xy="1564,803" size="303,100" type="rect"/>
+    <graph id="n12_nhm7" name="n12" xy="136,796" size="165,102" type="rect"/>
+    <graph id="n13_nhm7" name="n13" xy="345,885" size="1224,265" type="rect"/>
+    <graph id="n14_nhm7" name="n14" xy="1033,223" size="100,100" type="rect"/>
+    <graph id="n15_nhm7" name="n15" xy="1374,105" size="100,100" type="rect"/>
+    <graph id="n16_nhm7" name="n16" xy="1746,227" size="100,100" type="rect"/>
+    <graph id="n17_nhm7" name="n17" xy="941,704" size="251,36" type="rect"/>
+    <graph id="n18_nhm7" name="n18" xy="1326,708" size="251,36" type="rect"/>
+    <graph id="n19_nhm7" name="n19" xy="1664,714" size="251,36" type="rect"/>
+    <graph id="n20_nhm7" name="n20" xy="192,717" size="251,36" type="rect"/>
+    <graph id="n21_nhm7" name="n21" xy="129,713" size="51,46" type="rect"/>
+  </displayList>
+</component>

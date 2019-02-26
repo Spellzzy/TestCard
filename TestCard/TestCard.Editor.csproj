@@ -121,6 +121,9 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="lowdll">
+      <HintPath>Assets\Scripts\Tools\DLL\lowdll.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="TestCard.csproj">

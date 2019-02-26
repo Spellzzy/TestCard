@@ -1,5 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <resources>
-  <info ID="10001" StageID="1" StageType="1" Level="1" YPos="1" NextPos="1" MonsterID="1" />
-  <info ID="10002" StageID="1" StageType="1" Level="1" YPos="1" NextPos="1" MonsterID="1" />
-  <info ID="10003" StageID="1" StageType="1" Level="1" YPos="1" NextPos="1" MonsterID="1" />
+	<info ID="10001" StageType="1" XPos="0" YPos="0" NextYPos="0@1" MonsterID="1"/>
+	<info ID="10002" StageType="2" XPos="0" YPos="1" NextYPos="0" MonsterID="1"/>
+	<info ID="10003" StageType="3" XPos="0" YPos="2" NextYPos="0" MonsterID="1"/>
+	<info ID="10004" StageType="1" XPos="1" YPos="0" NextYPos="1" MonsterID="1"/>
+	<info ID="10005" StageType="4" XPos="1" YPos="1" NextYPos="1" MonsterID="1"/>
+	<info ID="10006" StageType="5" XPos="1" YPos="2" NextYPos="1" MonsterID="1"/>
+	<info ID="10007" StageType="0" XPos="2" YPos="1" NextYPos="0@1" MonsterID="1"/>
+	<info ID="10008" StageType="3" XPos="2" YPos="2" NextYPos="2" MonsterID="1"/>
+	<info ID="10009" StageType="1" XPos="3" YPos="0" NextYPos="1" MonsterID="1"/>
+	<info ID="10010" StageType="4" XPos="3" YPos="1" NextYPos="1" MonsterID="1"/>
+	<info ID="10011" StageType="2" XPos="3" YPos="2" NextYPos="1" MonsterID="1"/>
+	<info ID="10012" StageType="2" XPos="4" YPos="1" NextYPos="-1" MonsterID="1"/>
+	<info ID="10013" StageType="1" XPos="5" YPos="0" NextYPos="0@1" MonsterID="1"/>
+	<info ID="10014" StageType="2" XPos="5" YPos="1" NextYPos="0" MonsterID="1"/>
+	<info ID="10015" StageType="3" XPos="5" YPos="2" NextYPos="0" MonsterID="1"/>
+	<info ID="10016" StageType="1" XPos="6" YPos="0" NextYPos="1" MonsterID="1"/>
+	<info ID="10017" StageType="4" XPos="6" YPos="1" NextYPos="1" MonsterID="1"/>
+	<info ID="10018" StageType="5" XPos="6" YPos="2" NextYPos="1" MonsterID="1"/>
+	<info ID="10019" StageType="0" XPos="7" YPos="1" NextYPos="0@1" MonsterID="1"/>
+	<info ID="10020" StageType="3" XPos="7" YPos="2" NextYPos="2" MonsterID="1"/>
+	<info ID="10021" StageType="1" XPos="8" YPos="0" NextYPos="1" MonsterID="1"/>
+	<info ID="10022" StageType="4" XPos="8" YPos="1" NextYPos="1" MonsterID="1"/>
+	<info ID="10023" StageType="2" XPos="8" YPos="2" NextYPos="1" MonsterID="1"/>
+	<info ID="10024" StageType="2" XPos="9" YPos="1" NextYPos="-1" MonsterID="1"/>
+	<info ID="10025" StageType="-1" XPos="10" YPos="0" NextYPos="-1" MonsterID="100"/>
 </resources>

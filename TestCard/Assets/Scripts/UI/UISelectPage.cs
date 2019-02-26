@@ -64,6 +64,7 @@ public class UISelectPage : Window {
     {
         Hide();
         // todo 打开地图界面 开始游戏 随机出一条游戏 线路 
+        Controller.Instance.view.OpenMapPage();
     }
 
     private void SetInfoPage(CarrerInfo info)

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using lowdll;
 
 public enum GAME_STATE
 {
@@ -37,12 +38,12 @@ public class Controller : Singleton<Controller> {
 
     public void InitStartGame()
     {
-        // todo 打开起始界面
+        // 打开起始界面
         view.OpenLoginPage();
 
     }
 
 	void Update () {
-		
+        //Debug.LogError(LowTest.GetZZZ(10, 10).ToString());
 	}
 }

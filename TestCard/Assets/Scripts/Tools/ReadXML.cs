@@ -67,7 +67,7 @@ public class ReadXML {
     /// <typeparam name="T"></typeparam>
     /// <param name="path"></param>
     /// <returns></returns>
-    public static Dictionary<string, T> GetCarrerInfo<T>(string path) where T: XMLInfo, new()
+    public static Dictionary<int, T> GetInfoDic<T>(string path) where T: XMLInfo, new()
     {
         XmlDocument xml = LoadXML(path);
         if (xml == null)
@@ -79,7 +79,7 @@ public class ReadXML {
         {
             //TestXML aaa = DESerializer<TestXML>(xml.InnerXml);
 
-            Dictionary<string, T> infoDic = new Dictionary<string, T>();
+            Dictionary<int, T> infoDic = new Dictionary<int, T>();
 
             XmlNodeList xmlNodeList = xml.SelectSingleNode("resources").ChildNodes;
             foreach (XmlElement item in xmlNodeList)

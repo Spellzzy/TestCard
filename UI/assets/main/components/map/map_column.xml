@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="350,938">
+  <displayList>
+    <component id="n0_s0i3" name="stage_1" src="h5edc" fileName="components/map/map_item.xml" xy="125,100"/>
+    <component id="n1_s0i3" name="stage_2" src="h5edc" fileName="components/map/map_item.xml" xy="125,419"/>
+    <component id="n2_s0i3" name="stage_3" src="h5edc" fileName="components/map/map_item.xml" xy="125,738"/>
+  </displayList>
+</component>

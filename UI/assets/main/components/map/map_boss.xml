@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1800,938">
+  <displayList>
+    <text id="n0_nhm7" name="n0" xy="587,119" size="624,225" fontSize="48" align="center" vAlign="middle" autoSize="none" bold="true" text="BOSS"/>
+    <component id="n1_nhm7" name="n1" src="h5edj" fileName="components/map/map_line.xml" xy="126,331" pivot="0.5,0.5" size="0,275" rotation="90"/>
+    <graph id="n2_nhm7" name="n2" xy="750,439" size="300,300" type="rect" fillColor="#ffff0000"/>
+  </displayList>
+</component>

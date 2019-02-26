@@ -12,6 +12,18 @@
     <image id="wg688" name="c22f842397dda1445d66c0d4b3b7d0a20df48666.jpg" path="/image/"/>
     <component id="wema9" name="map_page.xml" path="/" exported="true"/>
     <component id="f353a" name="select_panel.xml" path="/panel/" exported="true"/>
+    <component id="h5edc" name="map_item.xml" path="/components/map/" exported="true"/>
+    <image id="h5edd" name="pocket.jpg" path="/image/common/"/>
+    <image id="h5ede" name="star.jpg" path="/image/common/"/>
+    <image id="h5edf" name="ques.jpg" path="/image/common/"/>
+    <image id="h5edg" name="reward.jpg" path="/image/common/"/>
+    <image id="h5edh" name="rest.jpg" path="/image/common/"/>
+    <image id="h5edi" name="common.jpg" path="/image/common/"/>
+    <component id="h5edj" name="map_line.xml" path="/components/map/" exported="true"/>
+    <component id="s0i3k" name="map_panel.xml" path="/components/map/" exported="true"/>
+    <component id="s0i3l" name="map_column.xml" path="/components/map/" exported="true"/>
+    <component id="nhm7m" name="map_boss.xml" path="/components/map/" exported="true"/>
+    <component id="nhm7n" name="battle_show.xml" path="/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

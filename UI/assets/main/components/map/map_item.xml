@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="100,100" pivot="0.5,0.5" extention="Button">
+  <controller name="type" pages="0,,1,,2,,3,,4,,5," selected="2"/>
+  <displayList>
+    <component id="n5_s0i3" name="EAST" src="h5edj" fileName="components/map/map_line.xml" xy="48,-227" pivot="0,1" scale="1,1.2" visible="false" rotation="90"/>
+    <component id="n6_s0i3" name="ES" src="h5edj" fileName="components/map/map_line.xml" xy="48,52" scale="1,1.7" visible="false" rotation="-45"/>
+    <component id="n7_s0i3" name="EN" src="h5edj" fileName="components/map/map_line.xml" xy="52,-224" pivot="0,1" scale="1,1.7" visible="false" rotation="43.8"/>
+    <loader id="n1_h5ed" name="icon" xy="0,0" size="100,100" url="ui://4ho3qoclh5edg" align="center" vAlign="middle" fill="scaleFree">
+      <gearIcon controller="type" pages="0,1,2,3,4" values="ui://4ho3qoclh5edf|ui://4ho3qoclh5edd|ui://4ho3qoclh5edg|ui://4ho3qoclh5edh|ui://4ho3qoclh5edi" default="ui://4ho3qoclh5ede"/>
+      <relation target="" sidePair="width-width,height-height"/>
+    </loader>
+    <text id="n8_s0i3" name="name_text" xy="-19,89" size="138,39" fontSize="30" align="center" vAlign="middle" autoSize="none" bold="true" text="NAME"/>
+  </displayList>
+  <Button downEffect="scale" downEffectValue="1.20"/>
+</component>

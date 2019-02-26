@@ -21,4 +21,15 @@ public class View : MonoBehaviour {
         UISelectPage uiSelect = new UISelectPage();
         uiSelect.Show();
     }
+
+    // 打开选择界面
+    public void OpenMapPage()
+    {
+        Controller.Instance.state = GAME_STATE.MAP;
+
+        UIMapPage uiMap = new UIMapPage();
+        uiMap.Show();
+    }
+
+    
 }

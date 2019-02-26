@@ -79,6 +79,9 @@
     <Reference Include="Mono.Cecil">
       <HintPath>Library\UnityAssemblies\Mono.Cecil.dll</HintPath>
     </Reference>
+    <Reference Include="lowdll">
+      <HintPath>Assets\Scripts\Tools\DLL\lowdll.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FairyGUI\Scripts\Core\BlendMode.cs" />
@@ -221,12 +224,15 @@
     <Compile Include="Assets\FairyGUI\Scripts\Utils\XMLList.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Utils\XMLUtils.cs" />
     <Compile Include="Assets\FairyGUI\Scripts\Utils\ZipReader.cs" />
+    <Compile Include="Assets\Scripts\Battle\BattleLogic.cs" />
+    <Compile Include="Assets\Scripts\Battle\UIBattlePage.cs" />
     <Compile Include="Assets\Scripts\Cards\BaseCard.cs" />
     <Compile Include="Assets\Scripts\Cards\CardGroup.cs" />
     <Compile Include="Assets\Scripts\Controller.cs" />
     <Compile Include="Assets\Scripts\Data\XMLInfo.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Model.cs" />
+    <Compile Include="Assets\Scripts\Monster\MonsterBase.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
     <Compile Include="Assets\Scripts\Tools\MyStack.cs" />
     <Compile Include="Assets\Scripts\Tools\ReadXML.cs" />
