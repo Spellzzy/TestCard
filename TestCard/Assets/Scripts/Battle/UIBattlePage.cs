@@ -5,13 +5,23 @@ using FairyGUI;
 
 public class UIBattlePage : Window{
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    protected override void OnInit()
+    {
+        base.OnInit();
+
+        contentPane = UIPackage.CreateObject("main", "battle_show").asCom;
+
+    }
+
+
+
+    public void SetMonsterInfo(MonsterBase info, int index)
+    {
+        // todo 找到怪物位置  初始化怪物UI信息
+    }
+
+    public void SetPlayerInfo()
+    {
+        // todo 设置玩家状态UI 信息
+    }
 }

@@ -149,4 +149,23 @@ public class MonsterInfo : XMLInfo
     public string Name;
 
     public string Art;
+
+    public int Pos;
+
+    public override void GetValue(XmlElement xl)
+    {
+        base.GetValue(xl);
+
+        MonsterID = Convert.ToInt32(xl.GetAttribute("ID"));
+
+        Hp = Convert.ToInt32(xl.GetAttribute("Hp"));
+
+        ActionLogic = xl.GetAttribute("ActionLogic");
+
+        Name = xl.GetAttribute("Name");
+
+        Art = xl.GetAttribute("Art");
+
+        Pos = Convert.ToInt32(xl.GetAttribute("Pos"));
+    }
 }

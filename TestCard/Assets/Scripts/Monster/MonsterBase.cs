@@ -12,6 +12,8 @@ public enum MOSTER_TYPE
 }
 
 public class MonsterBase : MonoBehaviour {
+    // 怪物信息
+    private MonsterInfo info;
 
     // 血量
     public int Hp;
@@ -22,9 +24,17 @@ public class MonsterBase : MonoBehaviour {
     // 召唤物 普通 精英 Boss 
     public MOSTER_TYPE type = MOSTER_TYPE.PUBLIC;
 
+    // 站位
+    public int Pos;
+
     public MonsterBase(MonsterInfo info)
     {
+        this.info = info;
+    }
 
+    private void InitMonster()
+    {
+        //info
     }
 
     // 怪物攻击
