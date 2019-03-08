@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using lowdll;
+using SlayCard;
 
 public enum GAME_STATE
 {
@@ -46,4 +47,11 @@ public class Controller : Singleton<Controller> {
 	void Update () {
         //Debug.LogError(LowTest.GetZZZ(10, 10).ToString());
 	}
+
+    public Player PlayerInfo {
+        get {
+            return model.GetPlayer();
+        }
+    }
+
 }

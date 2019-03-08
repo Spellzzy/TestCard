@@ -23,7 +23,8 @@
     <component id="s0i3k" name="map_panel.xml" path="/components/map/" exported="true"/>
     <component id="s0i3l" name="map_column.xml" path="/components/map/" exported="true"/>
     <component id="nhm7m" name="map_boss.xml" path="/components/map/" exported="true"/>
-    <component id="nhm7n" name="battle_show.xml" path="/"/>
+    <component id="nhm7n" name="battle_show.xml" path="/" exported="true"/>
+    <component id="ro3co" name="up_com.xml" path="/components/" exported="true"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

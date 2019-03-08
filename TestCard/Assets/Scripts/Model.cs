@@ -31,6 +31,11 @@ public class Model : MonoBehaviour {
         player = new Player(_carrer);
     }
 
+    public Player GetPlayer()
+    {
+        return player;
+    }
+
     void Start () {
 		
 	}

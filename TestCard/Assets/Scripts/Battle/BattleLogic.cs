@@ -90,7 +90,7 @@ public class BattleLogic : MonoBehaviour {
 
     private void InitPlayer()
     {
-        battleUI.SetPlayerInfo();
+        battleUI.InitPlayerInfo();
     }
 
     void Update () {
@@ -103,11 +103,12 @@ public class BattleLogic : MonoBehaviour {
         }
         else if (currentTurn == TURN_TYPE.EMPTY)
         {
-            // todo 怪物回合 按照攻击逻辑 依次进行攻击
+            // todo 怪物回合 按照攻击逻辑 依次进行攻击 防御 进化
         }
         else if (currentTurn == TURN_TYPE.OVER)
         {
             // todo 战斗结束 判断 胜利方
+            currentTurn = TURN_TYPE.EMPTY;
         }
 	}
 }

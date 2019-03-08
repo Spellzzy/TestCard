@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2048,120">
+  <displayList>
+    <graph id="n24_uibj" name="up_bg" xy="0,0" size="2048,120" group="n32_uibj" type="rect" lineSize="0"/>
+    <text id="n25_uibj" name="name_text" xy="19,32" size="206,54" group="n32_uibj" fontSize="36" vAlign="middle" autoSize="none" bold="true" text="Name;"/>
+    <text id="n26_uibj" name="hp_text" xy="351,36" size="234,47" group="n32_uibj" fontSize="36" color="#ff0000" vAlign="middle" autoSize="shrink" bold="true" text="8888/8888"/>
+    <graph id="n27_uibj" name="hp_icon" xy="249,10" size="100,100" group="n32_uibj" type="eclipse" fillColor="#ffff0000"/>
+    <graph id="n28_uibj" name="gold_icon" xy="605,10" size="100,100" group="n32_uibj" type="eclipse" fillColor="#ffffcc00"/>
+    <text id="n29_uibj" name="gold_text" xy="713,36" size="234,47" group="n32_uibj" fontSize="36" color="#ffcc00" vAlign="middle" autoSize="shrink" bold="true" text="8888"/>
+    <text id="n30_uibj" name="Floor:" xy="990,35" size="107,47" group="n32_uibj" fontSize="36" vAlign="middle" autoSize="none" bold="true" text="Floor:"/>
+    <text id="n31_uibj" name="floor_text" xy="1097,35" size="45,47" group="n32_uibj" fontSize="36" vAlign="middle" autoSize="none" bold="true" text="10"/>
+    <group id="n32_uibj" name="up_group" xy="0,0" size="2048,120" advanced="true" collapsed="true"/>
+  </displayList>
+</component>

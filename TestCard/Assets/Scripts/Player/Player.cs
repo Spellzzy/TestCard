@@ -21,6 +21,12 @@ public class Player {
     // 血量
     public int HP { get; private set; }
     
+    // 血量上限
+    public int MAX_HP { get; private set; }
+        
+    // 玩家名
+    public string Name { get; set; }
+    
     // 金币
     public int Money { get; private set; }
 
@@ -60,21 +66,24 @@ public class Player {
     private void SetWarrior()
     {
         HP = 90;
+        MAX_HP = HP;
     }
     // 设置lieren初始信息
     private void SetHunter()
     {
         HP = 75;
+        MAX_HP = HP;
     }
     // 设置术士初始信息
     private void SetWarlock()
     {
         HP = 65;
+        MAX_HP = HP;
     }
     #endregion
 
 
-}
+    }
 
 }
 

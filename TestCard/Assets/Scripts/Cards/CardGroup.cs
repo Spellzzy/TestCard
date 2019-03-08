@@ -19,7 +19,7 @@ public class CardGroup {
     // 卡组内数量
     public int Count { get; private set; }
 
-    public CardGroup(CAREER _career)
+    protected CardGroup(CAREER _career)
     {
         deckCardDic = new Dictionary<int, BaseCard>();
 
