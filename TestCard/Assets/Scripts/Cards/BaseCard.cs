@@ -1,6 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Xml;
 using UnityEngine;
+using SlayCard;
 
 // 卡牌类型
 public enum CARD_TYPE {
@@ -17,13 +20,13 @@ public enum CARD_QUALITY {
 }
 
 public enum CARD_CAREER {
-    WARRIOR,        // -- 战士
+    WARRIOR = 101,        // -- 战士
     HUNTER,         // -- 猎人
     WARLOCK,        // -- 术士
     COMMON,         // -- 通用
 }
 
-public class BaseCard {
+public class BaseCard : XMLInfo {
 
     // 卡牌ID
     public long ID { get; private set; }
@@ -51,12 +54,16 @@ public class BaseCard {
     public string Desc { get; private set; }
 
     // 卡牌职业
-    public CARD_CAREER Career { get; private set; }
+    public CAREER Career { get; private set; }
 
     // 等级
     public int Level { get; set; }
 
     public int Index { get; set; }
+
+    public int Atk;
+
+    public int Def;
 
     // 卡牌升级
     public void Upgrade()
@@ -72,5 +79,23 @@ public class BaseCard {
     public void Change()
     {
 
+    }
+
+    public override void GetValue(XmlElement xl)
+    {
+        base.GetValue(xl);
+
+        ID = Convert.ToInt32(xl.GetAttribute("ID"));
+
+        Quality = (CARD_QUALITY)Convert.ToInt32(xl.GetAttribute("Quality"));
+
+        Career = (CAREER)Convert.ToInt32(xl.GetAttribute("Carrer"));
+
+        Name = xl.GetAttribute("Name");
+
+        Icon = xl.GetAttribute("Icon");
+
+        Atk = Convert.ToInt32(xl.GetAttribute("Attack"));
+        Def = Convert.ToInt32(xl.GetAttribute("Defence"));
     }
 }

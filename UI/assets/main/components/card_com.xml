@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="200,280">
+  <controller name="quality" pages="0,,1,,2," selected="0"/>
+  <displayList>
+    <graph id="n1_qox6" name="bg" xy="0,0" size="200,280" type="rect" lineSize="0"/>
+    <graph id="n5_qox6" name="quality" xy="35,45" size="130,130" type="rect" lineSize="0" fillColor="#ff999999">
+      <gearColor controller="quality" pages="0,1,2" values="#999999|#0066ff|#ff9900"/>
+    </graph>
+    <text id="n2_qox6" name="name_text" xy="36,4" size="126,44" fontSize="30" align="center" vAlign="middle" autoSize="none" bold="true" text="NAME"/>
+    <text id="n3_qox6" name="value_text" xy="7,172" size="185,91" fontSize="24" vAlign="middle" autoSize="none" bold="true" text="VALUE"/>
+    <loader id="n4_qox6" name="icon_loader" xy="45,55" size="110,110"/>
+  </displayList>
+</component>

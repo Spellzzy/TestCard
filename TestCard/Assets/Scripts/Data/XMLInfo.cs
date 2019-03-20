@@ -135,7 +135,7 @@ public class StageInfo : XMLInfo
     }
 }
 
-
+// 怪物属性
 public class MonsterInfo : XMLInfo
 {
     public int MonsterID;

@@ -25,6 +25,8 @@
     <component id="nhm7m" name="map_boss.xml" path="/components/map/" exported="true"/>
     <component id="nhm7n" name="battle_show.xml" path="/" exported="true"/>
     <component id="ro3co" name="up_com.xml" path="/components/" exported="true"/>
+    <component id="qox6p" name="card_com.xml" path="/components/" exported="true"/>
+    <image id="qox6r" name="l.png" path="/image/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>

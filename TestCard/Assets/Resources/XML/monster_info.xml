@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<resources>
+	<info ID="20001" Hp="10" Name="20001" Art="1" Pos="1" ActionLogic="1"/>
+	<info ID="20002" Hp="15" Name="20002" Art="1" Pos="1" ActionLogic="1"/>
+	<info ID="20003" Hp="20" Name="20003" Art="1" Pos="1" ActionLogic="1"/>
+</resources>

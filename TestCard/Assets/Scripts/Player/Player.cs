@@ -7,10 +7,10 @@ namespace SlayCard
 
 public enum CAREER
 {
-    NONE,
-    WARRIOR,        // -- 战士
+    WARRIOR = 101,        // -- 战士
     HUNTER,         // -- 猎人
     WARLOCK,        // -- 术士
+    NONE
 }
 
 public class Player {
@@ -32,13 +32,20 @@ public class Player {
 
     // 卡组 CardGroup
     public CardGroup CardGroup;
+    
+    // 每回合抽牌数量
+    public int ExtractNum { get; set; }
 
     // todo 神器组 ItemGroup    
 
     public Player(int career)
     {
+        // 默认每回合抽牌数为2
+        ExtractNum = 2;
+        // 职业
         _career = (CAREER)career;
         SetInfo();
+        // 卡组信息
         CardGroup = CardGroup.Create(_career);
     }
 
@@ -58,6 +65,11 @@ public class Player {
             default:
                 break;
         }
+    }
+
+    public void SetExtractNum(int num)
+    {
+         ExtractNum = num;
     }
 
     #region 设置职业基础信息

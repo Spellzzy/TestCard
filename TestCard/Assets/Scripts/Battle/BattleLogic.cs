@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using SlayCard;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -11,33 +12,51 @@ public enum TURN_TYPE
 }
 
 public class BattleLogic : MonoBehaviour {
+    private int ADDNUM = 3;
     // UI
     private UIBattlePage battleUI;
-
+    // 回合状态
     private TURN_TYPE currentTurn = TURN_TYPE.EMPTY;
 
+    private int monsterID;
+    // 关卡id 暂时弃用 先实现单个怪物
     private int stageID;
 
     private MapInfo curMap;
-
+    // 怪物详情list
     private Dictionary<int, MonsterBase> curMonster_dic = new Dictionary<int, MonsterBase>();
-
+    // 怪物原型list
     private Dictionary<int, MonsterInfo> proMonster_dic = new Dictionary<int, MonsterInfo>();
+    // 玩家信息
+    private Player player;
 
-    public BattleLogic(int stage_id)
+    private CardGroup cardGroup;
+
+    public BattleLogic()
     {
-        stageID = stage_id;
+        InitMonsterDic();        
     }
 
-    private void ShowBattleUI()
+    public void ShowBattleUI(int _id)
     {
+        monsterID = _id;
+
+        player = Controller.Instance.model.player;
+        cardGroup = player.CardGroup;
+
         battleUI = new UIBattlePage();
         battleUI.Show();
+        // 当前怪物详情
+        curMonster_dic[monsterID] = new MonsterBase(GetMonsterInfo(monsterID));
+
+        InitMonster();
+        InitPlayer();
     }
 
     private void InitMonsterDic()
     {
         proMonster_dic = ReadXML.GetInfoDic<MonsterInfo>(Application.dataPath + "/Resources/XML/" + "monster_info.xml");
+        Debug.Log("怪物原型数量 ===> " + proMonster_dic.Count);
     }
 
     private MonsterInfo GetMonsterInfo(int id)
@@ -52,7 +71,7 @@ public class BattleLogic : MonoBehaviour {
     private void GetMonsterFromStage()
     {
         // 根据 stageID 获取 关卡中 怪物ID(可能多名)
-        Dictionary<int, MapInfo> cur_dic = ReadXML.GetInfoDic<MapInfo>(Application.dataPath + "/Resources/XML/" + "map_info.xml");
+        Dictionary<int, MapInfo> cur_dic = ReadXML.GetInfoDic<MapInfo>(Application.dataPath + "/Resources/XML/" + "stage_info.xml");
         if (cur_dic.ContainsKey(stageID))
         {
             Debug.LogError("error  stage ID");
@@ -75,6 +94,9 @@ public class BattleLogic : MonoBehaviour {
 
     }
 
+
+
+
     //  初始化怪物信息
     private void InitMonster()
     {
@@ -86,11 +108,24 @@ public class BattleLogic : MonoBehaviour {
             index++;
         }
     }
-
-
+    // 战斗开始初始玩家信息
     private void InitPlayer()
     {
         battleUI.InitPlayerInfo();
+        cardGroup.FightBegin();
+        InitCardBattle();
+    }
+
+    private void InitCardBattle()
+    {
+        // 回合开始 抽牌 多三张
+        for (int i = 0; i < player.ExtractNum + ADDNUM; i++)
+        {
+            // 抽出来的牌
+            BaseCard cur_card = cardGroup.ExtractCard(cardGroup.GetRandomIndex());
+            // UI展示压入手牌列表
+            battleUI.SetListCardUI(cur_card);
+        }
     }
 
     void Update () {

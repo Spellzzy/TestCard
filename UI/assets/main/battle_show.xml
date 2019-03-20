@@ -21,7 +21,7 @@
     <graph id="n19_nhm7" name="n19" xy="1662,712" size="251,36" group="n22_nhm7" type="rect"/>
     <graph id="n20_nhm7" name="n20" xy="190,715" size="251,36" group="n22_nhm7" type="rect"/>
     <graph id="n21_nhm7" name="n21" xy="127,711" size="51,46" group="n22_nhm7" type="rect"/>
-    <group id="n22_nhm7" name="n22" xy="0,0" size="2041,1148" collapsed="true"/>
+    <group id="n22_nhm7" name="n22" xy="0,0" size="2041,1148" hideByEditor="true" visible="false" advanced="true" collapsed="true"/>
     <component id="n24_uibj" name="up_com" src="ro3co" fileName="components/up_com.xml" xy="0,0"/>
     <component id="n37_qtcn" name="end_turn_btn" src="wg681" fileName="components/btn_basic.xml" xy="1613,801" size="300,100" group="n38_qtcn">
       <Button title="结束回合"/>
@@ -35,5 +35,12 @@
     <graph id="n35_uibj" name="power_bg" xy="163,801" size="160,160" group="n38_qtcn" type="eclipse" fillColor="#ff00cc66"/>
     <text id="n36_uibj" name="power_text" xy="183,846" size="118,69" group="n38_qtcn" fontSize="36" color="#ffffff" align="center" vAlign="middle" autoSize="none" bold="true" text="10/10"/>
     <group id="n38_qtcn" name="bottom_group" xy="20,801" size="2008,336" advanced="true" collapsed="true"/>
+    <list id="n39_qox6" name="card_list" xy="374,872" size="1300,280" layout="flow_hz" overflow="scroll" scroll="horizontal" lineGap="10" colGap="10" defaultItem="ui://4ho3qoclqox6p" align="center" autoClearItems="true">
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+      <item/>
+    </list>
   </displayList>
 </component>

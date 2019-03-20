@@ -13,7 +13,7 @@ public enum MOSTER_TYPE
 
 public class MonsterBase : MonoBehaviour {
     // 怪物信息
-    private MonsterInfo info;
+    public MonsterInfo info;
 
     // 血量
     public int Hp;

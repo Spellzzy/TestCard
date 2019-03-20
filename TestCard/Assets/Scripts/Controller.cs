@@ -26,15 +26,24 @@ public class Controller : Singleton<Controller> {
     // 默认暂停
     public GAME_STATE state = GAME_STATE.Over;
 
+    public BattleLogic battleLogic;
+
     protected override void Awake()
     {
         base.Awake();
         model = GameObject.FindGameObjectWithTag("Model").GetComponent<Model>();
         view = GameObject.FindGameObjectWithTag("View").GetComponent<View>();
 
+        battleLogic = new BattleLogic();
+
         InitStartGame();
 
         DontDestroyOnLoad(this);
+    }
+
+    public void IntoBattle(int _id)
+    {
+        battleLogic.ShowBattleUI(_id);
     }
 
     public void InitStartGame()

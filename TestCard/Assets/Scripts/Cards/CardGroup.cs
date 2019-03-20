@@ -4,6 +4,10 @@ using UnityEngine;
 using SlayCard;
 
 public class CardGroup {
+
+    // 卡牌原型
+    private Dictionary<int, BaseCard> proCard_dic = new Dictionary<int, BaseCard>();
+
     // 牌组堆
     private Dictionary<int, BaseCard> deckCardDic = null;
 
@@ -21,6 +25,9 @@ public class CardGroup {
 
     protected CardGroup(CAREER _career)
     {
+        // 卡牌原型字典
+        proCard_dic = ReadXML.GetInfoDic<BaseCard>(Application.dataPath + "/Resources/XML/" + "card_info.xml");
+
         deckCardDic = new Dictionary<int, BaseCard>();
 
         deckCardList = new List<BaseCard>();
@@ -47,6 +54,13 @@ public class CardGroup {
         InitAllCardList();
     }
 
+    public void FightBegin()
+    {
+        InitAllCardList();
+
+        DeckDicToList();
+    }
+
     public void FightOver()
     {
 
@@ -54,6 +68,7 @@ public class CardGroup {
 
     private void SetInitCard(CAREER _career)
     {
+        SetInitCardByCaeer(_career);
         // 判定职业设置初始卡
         switch (_career)
         {
@@ -73,10 +88,23 @@ public class CardGroup {
 
     #region 设置职业基础卡牌
     // 设置初始卡牌 
+
+    private void SetInitCardByCaeer(CAREER _career)
+    {
+        foreach (var item in proCard_dic)
+        {
+            Debug.Log("player ---> "+ _career  +  " ||  dic --> " + item.Value.Career);
+            if (item.Value.Career == _career)
+            {
+                deckCardDic.Add(item.Key, item.Value);
+            }
+        }
+    }
+
     // todo 从xml 中读取 职业初始卡有哪些
     private void SetWarriorCard()
     {
-
+        
     }
 
     private void SetHunterCard()
@@ -184,6 +212,7 @@ public class CardGroup {
 
     #endregion
 
+
     #region 战斗内卡组操作
     // 战斗开始 把卡组导入牌堆
     public void DeckDicToList()
@@ -194,8 +223,13 @@ public class CardGroup {
         }
     }
 
+    public int GetRandomIndex()
+    {
+        return Random.Range(0, deckCardList.Count);
+    }
+
     // 抽牌
-    public void ExtractCard(int index)
+    public BaseCard ExtractCard(int index)
     {
         BaseCard _card = deckCardList[index];
 
@@ -203,6 +237,8 @@ public class CardGroup {
         handCardList.Add(_card);
         // 从牌堆移出
         deckCardList.Remove(_card);
+
+        return _card;
 
         // todo 加入手牌动画 展示卡牌
     }

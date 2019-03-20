@@ -11,6 +11,8 @@ public class UISelectPage : Window {
 
     private GComponent infoPage;
 
+    private CarrerInfo cur_info;
+
     protected override void OnInit()
     {
         base.OnInit();
@@ -50,6 +52,7 @@ public class UISelectPage : Window {
     {
         CarrerInfo info = (CarrerInfo)((GButton)context.sender).data;
         Debug.LogError("----->  " + info.ID);
+        cur_info = info;
 
         SetInfoPage(info);
     }
@@ -62,6 +65,7 @@ public class UISelectPage : Window {
 
     private void OnClickConfirm()
     {
+        Controller.Instance.model.InitPlayer(cur_info.ID);
         Hide();
         // todo 打开地图界面 开始游戏 随机出一条游戏 线路 
         Controller.Instance.view.OpenMapPage();

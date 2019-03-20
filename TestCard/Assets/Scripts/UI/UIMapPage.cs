@@ -28,7 +28,7 @@ public class UIMapPage :  Window{
 
     private void GetMapInfo()
     {
-        stageInfoList = ReadXML.GetInfoList<StageInfo>(Application.dataPath + "/Resources/XML/" + "stage_info.xml");
+        stageInfoList = ReadXML.GetInfoList<StageInfo>(Application.dataPath + "/Resources/XML/" + "map_info.xml");
     }
 
     private void SetMapInfo()
@@ -79,6 +79,9 @@ public class UIMapPage :  Window{
                     GTextField name_text = stage_com.GetChild("name_text").asTextField;
                     name_text.text = data.XPos.ToString() + "  ---- " + data.YPos.ToString();
 
+                    stage_com.data = data;
+                    stage_com.onClick.Set(OnClickStageBtn);
+
                     // 画线
                     for (int k = 0; k < data.NextYPos.Count; k++)
                     {
@@ -122,6 +125,17 @@ public class UIMapPage :  Window{
 
             mapShowList.AddChild(map_boss); 
         }
+    }
+
+    public void OnClickStageBtn(EventContext context)
+    {
+        StageInfo data = (StageInfo)((GButton)context.sender).data;
+        if (null == data)
+        {
+            return;
+        }
+
+        Controller.Instance.IntoBattle(data.MonsterID);
     }
 
     
