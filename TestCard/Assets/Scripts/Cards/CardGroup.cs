@@ -296,6 +296,12 @@ public class CardGroup {
         return handCardList == null ? handCardList : null;
     }
 
+    // 获取当前手牌数量
+    public int GetHandListNum()
+    {
+        return handCardList.Count;
+    }
+
     /// <summary>
     /// 战斗结束 清空 弃牌堆 手牌 起始牌堆
     /// </summary>

@@ -32,6 +32,18 @@ public class BattleLogic : MonoBehaviour {
 
     private CardGroup cardGroup;
 
+    // 当前焦点卡牌
+    private BaseCard currentCard = null;
+    public bool GetCurrentCard()
+    {
+        return currentCard != null;
+    }
+
+    public void SetCurrentCard(BaseCard _card)
+    {
+        currentCard = _card;
+    }
+
     public BattleLogic()
     {
         InitMonsterDic();        
@@ -44,7 +56,7 @@ public class BattleLogic : MonoBehaviour {
         player = Controller.Instance.model.player;
         cardGroup = player.CardGroup;
 
-        battleUI = new UIBattlePage();
+        battleUI = new UIBattlePage(this);
         battleUI.Show();
         // 当前怪物详情
         curMonster_dic[monsterID] = new MonsterBase(GetMonsterInfo(monsterID));
@@ -124,7 +136,7 @@ public class BattleLogic : MonoBehaviour {
             // 抽出来的牌
             BaseCard cur_card = cardGroup.ExtractCard(cardGroup.GetRandomIndex());
             // UI展示压入手牌列表
-            battleUI.SetListCardUI(cur_card);
+            battleUI.SetListCardUI(cardGroup.GetHandListNum(), cur_card);
         }
     }
 

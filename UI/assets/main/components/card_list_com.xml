@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="2048,1152">
+  <controller name="card" pages="0,,1,,2,,3,,4,,5,,6,,7,,8,,9," selected="0"/>
+  <displayList>
+    <component id="n13_p9mm" name="card_1" src="qox6p" fileName="components/card_com.xml" xy="1024,886">
+      <gearDisplay controller="card" pages="0,1,2,3,4,5,6,7,8,9"/>
+      <gearXY controller="card" pages="0,1,2,3,4,5" values="1024,886|1024,886|886,886|794,886|635,886|584,886" default="1024,826" tween="true"/>
+    </component>
+    <component id="n14_p9mm" name="card_2" src="qox6p" fileName="components/card_com.xml" xy="1024,886">
+      <gearDisplay controller="card" pages="2,3,4,5,6,7,8,9"/>
+      <gearXY controller="card" pages="0,1,2,3,4,5" values="1024,886|1024,886|1114,886|1024,886|855,886|804,886" default="1024,826" tween="true"/>
+    </component>
+    <component id="n15_p9mm" name="card_3" src="qox6p" fileName="components/card_com.xml" xy="1024,886">
+      <gearDisplay controller="card" pages="3,4,5,6,7,8,9"/>
+      <gearXY controller="card" pages="0,1,2,3,4,5,6,7,8,9" values="1024,886|1024,886|1024,886|1255,886|1075,886|1244,886|1024,826|1024,826|1024,826|1024,826" tween="true"/>
+    </component>
+    <component id="n17_p9mm" name="card_4" src="qox6p" fileName="components/card_com.xml" xy="1024,886">
+      <gearDisplay controller="card" pages="4,5,6,7,8,9"/>
+      <gearXY controller="card" pages="0,1,2,3,4,5,6,7,8,9" values="1024,886|1024,886|1024,886|1024,886|1295,886|1024,886|1024,826|1024,826|1024,826|1024,826" tween="true"/>
+    </component>
+    <component id="n16_p9mm" name="card_5" src="qox6p" fileName="components/card_com.xml" xy="1024,886">
+      <gearDisplay controller="card" pages="5,6,7,8,9"/>
+      <gearXY controller="card" pages="0,1,2,3,4,5,6,7,8,9" values="1024,886|1024,886|1024,886|1024,886|1024,886|1464,886|1024,826|1024,826|1024,826|1024,826" tween="true"/>
+    </component>
+  </displayList>
+</component>

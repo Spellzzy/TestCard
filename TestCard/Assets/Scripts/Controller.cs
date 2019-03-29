@@ -27,7 +27,7 @@ public class Controller : Singleton<Controller> {
     public GAME_STATE state = GAME_STATE.Over;
 
     public BattleLogic battleLogic;
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -62,5 +62,7 @@ public class Controller : Singleton<Controller> {
             return model.GetPlayer();
         }
     }
+
+    
 
 }

@@ -8,6 +8,8 @@ public class UIBattlePage : Window{
 
     private Player cur_player;
 
+    private BattleLogic _logic;
+
     #region UI组件
     // panel
     private GComponent panel_com;
@@ -22,10 +24,17 @@ public class UIBattlePage : Window{
 
     private GTextField name_text;
 
-    private GList card_list;
+    private GComponent card_list;
 
+    private FairyGUI.Controller card_list_con;
 
     #endregion
+
+    public UIBattlePage(BattleLogic logic)
+    {
+        _logic = logic;
+    }
+
     protected override void OnInit()
     {
         base.OnInit();
@@ -60,8 +69,9 @@ public class UIBattlePage : Window{
 
         gold_text = up_com.GetChild("gold_text").asTextField;
 
-        card_list = panel_com.GetChild("card_list").asList;
-        card_list.RemoveChildrenToPool();
+        card_list = panel_com.GetChild("card_list").asCom;
+
+        card_list_con = card_list.GetController("card");
     }
 
 
@@ -80,8 +90,6 @@ public class UIBattlePage : Window{
 
         // todo设置玩家 左侧信息
         // todo初始化牌组
-
-        
 
     }
 
@@ -110,19 +118,103 @@ public class UIBattlePage : Window{
         gold_text.text = cur_player.Money.ToString();
     }
 
-    public void SetListCardUI(BaseCard _card)
+    public void SetListCardUI(int index, BaseCard _card)
     {
         // todo 玩家抽到的卡牌 加入手牌列表展示用
         Debug.Log(_card.ID);
 
-        GComponent com = card_list.GetFromPool("").asCom;
+        GComponent com = card_list.GetChild("card_" + index).asCom.GetChild("body").asCom;
 
         GTextField name_text = com.GetChild("name_text").asTextField;
         name_text.text = _card.Name;
 
         GTextField value_text = com.GetChild("value_text").asTextField;
         value_text.text = _card.Atk.ToString();
+        com.data = _card;
 
-        card_list.AddChild(com);
+        //com.onTouchBegin.Set(TouchCard);
+
+        com.draggable = true;
+        com.onDragStart.Set(OnDragSatart);
+        com.onDragMove.Set(OnDrag);
+        com.onDragEnd.Set(OnDragEnd);
+        com.dragBounds = new Rect(0, 0, 2048, 1152);
+
+        card_list_con.SetSelectedIndex(index);
+    }
+    Vector2 card_positon;
+
+    private void OnDragSatart(EventContext context)
+    {
+        //context.PreventDefault();
+        GComponent com = (GComponent)context.sender;
+        card_positon = com.xy;
+        Debug.Log("Start pos " + card_positon);
+    }
+    private void OnDrag(EventContext context)
+    {
+        //Debug.Log(Input.mousePosition.x + " // " +  Input.mousePosition.y);
+        //Debug.Log(Tools.GetScreenXY(screenPos));
+        //((GButton)context.sender).xy = Tools.GetScreenXY(Input.mousePosition);
+    }
+
+    private void OnDragEnd(EventContext context)
+    {
+        GComponent com = (GComponent)context.sender;
+
+        if (CheckCardPos(card_positon, com.xy))
+        {
+            // todo 手牌列表数据移除
+            card_list_con.SetSelectedIndex(card_list_con.selectedIndex - 1);
+        }
+        else
+        {
+            // 拖拽距离过短 表示不使用 回归原位
+            com.position = card_positon;
+        }
+    }
+
+    private bool CheckCardPos(Vector2 before, Vector2 after)
+    {
+        Debug.Log("before ---> " + before);
+        Debug.Log("after ---> " + after);
+        float dis = Vector2.Distance(before, after);
+        if (dis > 300.0f)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    public void TouchCard(EventContext context)
+    {
+        if (_logic.GetCurrentCard())
+        {
+            return;
+        }
+        // 当前所选卡牌
+        Debug.Log("context ---> " + context);
+        Debug.Log("context.data ---> " + context.sender);
+        GComponent card_com = (GComponent)context.sender;
+        BaseCard card_data = (BaseCard)card_com.data;
+
+        //// 记录原层
+        //int before_order = card_com.sortingOrder;
+
+        //// 记录原宽高
+        //float befor_width = card_com.width;
+        //float befor_height = card_com.height;
+
+
+        //// 置顶层
+        //card_com.sortingOrder = 100000000;
+        //// 放大
+        //card_com.width *= 1.2f;
+        //card_com.width *= 1.2f;
+
+        _logic.SetCurrentCard(card_data);
+
+        Debug.LogError("Select ----> " + card_data.ID);
+
     }
 }

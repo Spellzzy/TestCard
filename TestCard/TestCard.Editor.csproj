@@ -126,6 +126,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="TestCard.Plugins.csproj">
+      <Project>{D7D0F1F3-6635-A87A-9382-1C8A2F26ACF7}</Project>
+      <Name>TestCard.Plugins</Name>
+    </ProjectReference>
     <ProjectReference Include="TestCard.csproj">
       <Project>{1A4420A5-C06A-245B-CFB5-BA730E39A8C3}</Project>
       <Name>TestCard</Name>
@@ -148,6 +152,17 @@
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Image.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text-Brighter.shader" />
     <None Include="Assets\FairyGUI\Resources\Shaders\FairyGUI-Text.shader" />
+    <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+    <None Include="Assets\Plugins\Android\build.xml" />
+    <None Include="Assets\Plugins\Android\res\layout-v11\status_bar_ongoing_event_progress_bar.xml" />
+    <None Include="Assets\Plugins\Android\res\layout\main.xml" />
+    <None Include="Assets\Plugins\Android\res\layout\status_bar_ongoing_event_progress_bar.xml" />
+    <None Include="Assets\Plugins\Android\res\values-v11\styles.xml" />
+    <None Include="Assets\Plugins\Android\res\values-v9\styles.xml" />
+    <None Include="Assets\Plugins\Android\res\values\main-strings.xml" />
+    <None Include="Assets\Plugins\Android\res\values\strings.xml" />
+    <None Include="Assets\Plugins\Android\res\values\styles.xml" />
+    <None Include="Assets\README.txt" />
     <None Include="Assets\Resources\XML\card_info.xml" />
     <None Include="Assets\Resources\XML\carrer_info.xml" />
     <None Include="Assets\Resources\XML\map_info.xml" />

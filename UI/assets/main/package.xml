@@ -27,6 +27,8 @@
     <component id="ro3co" name="up_com.xml" path="/components/" exported="true"/>
     <component id="qox6p" name="card_com.xml" path="/components/" exported="true"/>
     <image id="qox6r" name="l.png" path="/image/"/>
+    <component id="p9mms" name="card_list_com.xml" path="/components/" exported="true"/>
+    <component id="p9mmt" name="base_com.xml" path="/components/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
