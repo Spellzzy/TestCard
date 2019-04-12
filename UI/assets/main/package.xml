@@ -29,6 +29,7 @@
     <image id="qox6r" name="l.png" path="/image/"/>
     <component id="p9mms" name="card_list_com.xml" path="/components/" exported="true"/>
     <component id="p9mmt" name="base_com.xml" path="/components/"/>
+    <component id="cyp8u" name="gift.xml" path="/panel/"/>
   </resources>
   <publish name="main"/>
 </packageDescription>
